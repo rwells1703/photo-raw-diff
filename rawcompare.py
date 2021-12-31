@@ -57,6 +57,8 @@ def main():
         print("No " + ctype + " folder")
         sys.exit()
 
+    print("Comparison started")
+
     # Loop through the files and list or delete them
     for raw_file_name in raw_file_names:
         compressed_file_equivalent = pathlib.Path(raw_file_name).stem + '.' + ctype
@@ -65,6 +67,8 @@ def main():
             
             if delete:
                 os.remove(path / rtype / raw_file_name)
+
+    print("Comparison finished")
 
 if __name__ == "__main__":
     main()
