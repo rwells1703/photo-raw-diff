@@ -57,7 +57,10 @@ def main():
         print("No " + ctype + " folder")
         sys.exit()
 
-    print("Comparison started")
+    if delete:
+        print("Deletion started")
+    else:
+        print("Comparison started")
 
     # Loop through the files and list or delete them
     for raw_file_name in raw_file_names:
@@ -68,7 +71,10 @@ def main():
             if delete:
                 os.remove(path / rtype / raw_file_name)
 
-    print("Comparison finished")
+    if delete:
+        print("Deletion finished")
+    else:
+        print("Comparison finished")
 
 if __name__ == "__main__":
     main()
