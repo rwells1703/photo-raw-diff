@@ -24,7 +24,7 @@ def main():
     # Default arguments
     delete = False
     path = pathlib.Path.cwd().resolve() # If no path is specified, use the current working directory
-    rtype = "NEF"
+    rtype = "DNG"
     ctype = "JPG"
 
     for arg in sys.argv:
